@@ -14,4 +14,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '../assets/styles/partials/variables.scss';
+main {
+    background-color: $bg-color;
+}
+</style>

@@ -23,9 +23,9 @@ export default {
   methods: {
     getCards() {
       axios.get(this.store.apiUrl).then((res) => {
-      console.log(res.data);
-      this.store.cards = res.data.data;
-    })
+        console.log(res.data);
+        this.store.cards = res.data.data;
+      })
 
     }
   },
