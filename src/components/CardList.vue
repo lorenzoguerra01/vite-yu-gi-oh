@@ -1,6 +1,6 @@
 <template>
     <div class="container bg-white p-5">
-        <div id="found">
+        <div class="bg-dark">
             <h5 class="fw-semibold text-white p-3 m-0 ">Found {{ store.cards.length }} cards</h5>
         </div>
         <div class="row gy-5 text-center" v-if="!store.isLoading">
@@ -30,9 +30,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '../assets/styles/partials/variables.scss';
-#found {
-    background-color: $bg-found;
-}
-</style>
+<style lang="scss" scoped></style>
