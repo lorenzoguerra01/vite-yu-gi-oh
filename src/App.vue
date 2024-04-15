@@ -1,22 +1,19 @@
 <template>
   <HeaderComponent />
   <MainComponent />
-  <CardList />
 </template>
 
 <script>
-import { store } from './store';
+import { store } from './store.js';
 import axios from 'axios';
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
-import CardList from './components/CardList.vue';
 
 export default {
   name: 'App',
   components: {
     HeaderComponent,
-    MainComponent,
-    CardList
+    MainComponent
   },
   data() {
     return {
@@ -25,8 +22,9 @@ export default {
   },
   created() {
     axios.get(this.store.apiUrl).then((res) => {
-      console.log(res.data.data);
+      console.log(res.data);
       this.store.cards = res.data.data;
+      console.log(this.store.cards);
     })
   },
 

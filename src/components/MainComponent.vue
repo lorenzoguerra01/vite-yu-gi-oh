@@ -1,15 +1,17 @@
 <template>
     <main>
-        
+        <CardList />
     </main>
 </template>
 
 <script>
-    export default {
-        name: 'MainComponent'
+import CardList from './CardList.vue';
+export default {
+    name: 'MainComponent',
+    components: {
+        CardList
     }
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
