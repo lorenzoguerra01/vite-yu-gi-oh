@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1>Yu-Gi-Oh Api</h1>
+        <h1 class="p-3">Yu-Gi-Oh</h1>
     </header>
 </template>
 

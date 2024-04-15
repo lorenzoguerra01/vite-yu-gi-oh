@@ -18,7 +18,7 @@ export default {
 
 img {
     width: 100%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 2 / 3;
 }
 
 .bg-card {

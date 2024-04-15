@@ -1,14 +1,17 @@
 <template>
-    <main>
+    <main class="pb-3">
+        <SearchComponent />
         <CardList />
     </main>
 </template>
 
 <script>
+import SearchComponent from './SearchComponent.vue';
 import CardList from './CardList.vue';
 export default {
     name: 'MainComponent',
     components: {
+        SearchComponent,
         CardList
     }
 }

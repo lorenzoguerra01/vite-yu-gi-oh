@@ -22,10 +22,14 @@ export default {
   },
   methods: {
     getCards() {
+      this.store.isLoading = true;
       axios.get(this.store.apiUrl).then((res) => {
-        console.log(res.data);
         this.store.cards = res.data.data;
-      })
+      }).catch((err) => {
+        console.log(err);
+      }).finally(() => {
+        this.store.isLoading = false;
+      }); 
 
     }
   },
