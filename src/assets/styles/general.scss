@@ -14,9 +14,9 @@ $fa-font-path: '../fonts/webfonts';
 @import '@fontsource/montserrat/700.css';
 
 body{
-    font-family: $basefont;
+    font-family: $main-font;
 }
 
 h1 {
-    color: $bluetext;
+    color: $text-color;
 }
