@@ -20,12 +20,17 @@ export default {
       store
     }
   },
-  created() {
-    axios.get(this.store.apiUrl).then((res) => {
+  methods: {
+    getCards() {
+      axios.get(this.store.apiUrl).then((res) => {
       console.log(res.data);
       this.store.cards = res.data.data;
-      console.log(this.store.cards);
     })
+
+    }
+  },
+  created() {
+    this.getCards();
   },
 
 }
