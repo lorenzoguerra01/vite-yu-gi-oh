@@ -28,7 +28,7 @@ export default {
           this.store.cards = res.data.data.map((card) => {
             return {
               title: card.name,
-              image: card.card_images[0].image_url_small,
+              image: card.card_images[0].image_url,
               archetype: card.archetype
             }
           });
