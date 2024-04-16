@@ -25,7 +25,13 @@ export default {
       this.store.isLoading = true;
       axios.get(this.store.apiUrl + this.store.endPoint.all, this.store.options)
         .then((res) => {
-          this.store.cards = res.data.data;
+          this.store.cards = res.data.data.map((card) => {
+            return {
+              title: card.name,
+              image: card.card_images[0].image_url_small,
+              archetype: card.archetype
+            }
+          });
         })
         .catch((err) => {
           console.log(err);
