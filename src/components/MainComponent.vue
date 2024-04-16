@@ -4,9 +4,7 @@
             <select class="form-select" aria-label="Default select example" @change="$emit('searchArchetype')"
                 v-model="store.options.params.archetype">
                 <option selected :value="null">Select Archetype</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option v-for="archetype in store.archetypes" :key="archetype" :value="archetype.archetype_name">{{archetype.archetype_name}}</option>
             </select>
         </div>
         <CardList />

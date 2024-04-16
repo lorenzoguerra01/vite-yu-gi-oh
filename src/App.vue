@@ -39,10 +39,25 @@ export default {
         .finally(() => {
           this.store.isLoading = false;
         });
+    },
+    getArchetype() {
+      this.store.isLoading = true;
+      axios.get(this.store.apiUrl + this.store.endPoint.archetype)
+        .then((res) => {
+          this.store.archetypes = res.data
+          console.log(this.store.archetypes);
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+        .finally(() => {
+          this.store.isLoading = false;
+        });
     }
   },
   created() {
     this.getCards();
+    this.getArchetype();
   },
 
 }

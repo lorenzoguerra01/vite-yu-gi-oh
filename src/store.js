@@ -4,7 +4,8 @@ export const store = reactive({
     apiUrl: 'https://db.ygoprodeck.com/api/v7/',
     endPoint: {
         all: 'cardinfo.php',
-        random: 'randomcard.php'
+        random: 'randomcard.php',
+        archetype: 'archetypes.php'
       },
       options: {
           params: {
