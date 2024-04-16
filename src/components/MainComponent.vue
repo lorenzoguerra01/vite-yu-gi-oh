@@ -14,8 +14,8 @@
 
         <CardList class="mb-5" />
         <div class=" text-end pe-5">
-            <button type="button" class="btn btn-dark ms-5 " :class="store.options.params.offset === 0 ? 'disabled' : ''">Previous</button>
-            <button type="button" class="btn btn-dark ms-3 " :class="store.cards.length < 20 ? 'disabled' : ''">Next</button>
+            <button type="button" class="btn btn-dark ms-5 " :class="store.options.params.offset === 0 ? 'disabled' : ''" @click="previous()">Previous</button>
+            <button type="button" class="btn btn-dark ms-3 " :class="store.cards.length < 20 ? 'disabled' : ''" @click="next()">Next</button>
         </div>
 
     </main>
