@@ -9,12 +9,12 @@ export const store = reactive({
       options: {
           params: {
             num: 20,
-            offset: 0
+            offset: 0,
+            archetype: null
           }
       },
       cards: [],
       archetypes: [],
-      total: 0,
       isLoading: false,
       error:{
         message: null

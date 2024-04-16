@@ -1,6 +1,6 @@
 <template>
   <HeaderComponent />
-  <MainComponent />
+  <MainComponent @searchArchetype="getCards" />
 </template>
 
 <script>
